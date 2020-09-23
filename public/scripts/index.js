@@ -149,12 +149,6 @@ function getScreenStream(callback) {
       .then((screenStream) => {
         callback(screenStream);
       });
-  } else {
-    getScreenId(function (error, sourceId, screen_constraints) {
-      navigator.mediaDevices.getUserMedia(screen_constraints).then(function (screenStream) {
-        callback(screenStream);
-      });
-    });
   }
 }
 
